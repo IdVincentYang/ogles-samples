@@ -5,30 +5,44 @@
 
 cmake_minimum_required(VERSION 3.4.1)
 
-set(APP_NAME "TouchMove")
+# add_definitions(-DNDEBUG)
 
-add_library(${APP_NAME}
+set(_APP_NAME "TouchMove")
+
+add_library(${_APP_NAME}
     SHARED
-    src/main/cpp/touch-move.cpp
+    src/main/cpp/engine.cpp
+    src/main/cpp/touch-move-main.cpp
 )
-
-# Import Library: native_app_glue
-set(LIB_NATIVE_APP_GLUE_STATIC "libNativeAppGlue")
-add_library(${LIB_NATIVE_APP_GLUE_STATIC}
-    STATIC
-    ${ANDROID_NDK}/sources/android/native_app_glue/android_native_app_glue.c
-)
-
-find_library(LIB_ANDROID android)
-find_library(LIB_LOG log)
 
 # Force export ANativeActivity_onCreate(),
 # Refer to: https://github.com/android-ndk/ndk/issues/381.
-set(CMAKE_SHARED_LINKER_FLAGS
-    "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_onCreate")
+set_target_properties(${_APP_NAME}
+    PROPERTIES
+    LINK_FLAGS
+    "-u ANativeActivity_onCreate"
+)
 
-target_link_libraries(${APP_NAME}
-    ${LIB_NATIVE_APP_GLUE_STATIC}
-    ${LIB_ANDROID}
-    ${LIB_LOG}
+set_target_properties(${_APP_NAME}
+    PROPERTIES
+    CXX_VISIBILITY_PRESET
+    hidden
+    C_VISIBILITY_PRESET
+    hidden
+)
+
+include(AndroidNdkModules)
+android_ndk_import_module_native_app_glue()
+
+find_library(_LIB_ANDROID android)
+find_library(_LIB_LOG log)
+find_library(_LIB_EGL EGL)
+find_library(_LIB_GLES2 GLESv2)
+
+target_link_libraries(${_APP_NAME}
+    native_app_glue
+    ${_LIB_ANDROID}
+    ${_LIB_EGL}
+    ${_LIB_GLES2}
+    ${_LIB_LOG}
 )
