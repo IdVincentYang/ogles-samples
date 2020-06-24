@@ -1,13 +1,11 @@
-apply plugin: 'com.android.application'
+apply from: "$project.rootDir/opengles3-book.gradle"
 
 android {
-    buildToolsVersion "29.0.3"
-    compileSdkVersion 29
     defaultConfig {
-        minSdkVersion 18
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        externalNativeBuild {
+            cmake {
+                targets 'Hello_Triangle'
+            }
+        }
     }
-    ndkVersion "21.2.6472646"
 }

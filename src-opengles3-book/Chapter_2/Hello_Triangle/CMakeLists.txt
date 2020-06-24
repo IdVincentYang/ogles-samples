@@ -1,0 +1,7 @@
+if(ANDROID)
+    add_library( Hello_Triangle SHARED Hello_Triangle.c )
+    target_link_libraries( Hello_Triangle Common )
+else()
+    add_executable( Hello_Triangle Hello_Triangle.c )
+    target_link_libraries( Hello_Triangle Common )
+endif()

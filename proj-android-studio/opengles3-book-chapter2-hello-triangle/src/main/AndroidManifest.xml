@@ -4,6 +4,7 @@
     <application
         android:allowBackup="false"
         android:hasCode="false"
+        android:icon="@mipmap/ic_launcher"
         android:label="HelloTriangle">
         <activity android:name="android.app.NativeActivity"
             android:label="HelloTriangle"
