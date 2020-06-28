@@ -1,0 +1,7 @@
+if(ANDROID)
+    add_library( MapBuffers SHARED MapBuffers.c )
+    target_link_libraries( MapBuffers Common )
+else()
+    add_executable( MapBuffers MapBuffers.c )
+    target_link_libraries( MapBuffers Common )
+endif()

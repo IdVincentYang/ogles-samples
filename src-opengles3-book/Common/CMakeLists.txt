@@ -3,7 +3,7 @@ set ( common_src Source/esShader.c
                  Source/esTransform.c
                  Source/esUtil.c )
 
-
+message(WARNING "OPENGLES3_LIBRARY=${OPENGLES3_LIBRARY}")
 # Win32 Platform files
 if(WIN32)
     set( common_platform_src Source/Win32/esUtil_win32.c )

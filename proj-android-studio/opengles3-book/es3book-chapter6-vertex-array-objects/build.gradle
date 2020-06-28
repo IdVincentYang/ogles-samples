@@ -1,0 +1,11 @@
+apply from: "$project.rootDir/opengles3-book.gradle"
+
+android {
+    defaultConfig {
+        externalNativeBuild {
+            cmake {
+                targets 'VertexArrayObjects'
+            }
+        }
+    }
+}

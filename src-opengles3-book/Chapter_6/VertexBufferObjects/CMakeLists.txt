@@ -1,0 +1,7 @@
+if(ANDROID)
+    add_library( VertexBufferObjects SHARED VertexBufferObjects.c )
+    target_link_libraries( VertexBufferObjects Common )
+else()
+    add_executable( VertexBufferObjects VertexBufferObjects.c )
+    target_link_libraries( VertexBufferObjects Common )
+endif()

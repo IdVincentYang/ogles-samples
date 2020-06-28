@@ -1,0 +1,7 @@
+if(ANDROID)
+    add_library( VertexArrayObjects SHARED VertexArrayObjects.c )
+    target_link_libraries( VertexArrayObjects Common )
+else()
+    add_executable( VertexArrayObjects VertexArrayObjects.c )
+    target_link_libraries( VertexArrayObjects Common )
+endif()
