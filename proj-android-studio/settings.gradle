@@ -1,2 +1,3 @@
 include ':app-touch-move'
-include ':opengles3-book-chapter2-hello-triangle'
+include ':opengles3-book:es3book-chapter2-hello-triangle'
+include ':opengles3-book:es3book-chapter6-example63'

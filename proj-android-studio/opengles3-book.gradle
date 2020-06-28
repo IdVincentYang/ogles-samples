@@ -22,13 +22,13 @@ android {
     }
     externalNativeBuild {
         cmake {
-            path '../../src-opengles3-book/CMakeLists.txt'
+            path "$project.rootDir/../src-opengles3-book/CMakeLists.txt"
         }
     }
     ndkVersion '21.2.6472646'
     sourceSets {
         main {
-            res.srcDirs = ['../res-common']
+            res.srcDirs = ["$project.rootDir/res-common"]
         }
     }
 }
