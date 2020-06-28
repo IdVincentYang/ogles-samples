@@ -1,0 +1,7 @@
+if(ANDROID)
+    add_library( TextureWrap SHARED TextureWrap.c )
+    target_link_libraries( TextureWrap Common )
+else()
+    add_executable( TextureWrap TextureWrap.c )
+    target_link_libraries( TextureWrap Common )
+endif()

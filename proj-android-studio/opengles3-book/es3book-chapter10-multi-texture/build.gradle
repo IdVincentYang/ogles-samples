@@ -1,0 +1,16 @@
+apply from: "$project.rootDir/opengles3-book.gradle"
+
+android {
+    defaultConfig {
+        externalNativeBuild {
+            cmake {
+                targets 'MultiTexture'
+            }
+        }
+    }
+    sourceSets {
+        main.assets {
+            srcDir "$project.rootDir/../src-opengles3-book/Chapter_10/MultiTexture"
+        }
+    }
+}

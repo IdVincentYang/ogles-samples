@@ -1,0 +1,7 @@
+if(ANDROID)
+    add_library( Simple_TextureCubemap SHARED Simple_TextureCubemap.c )
+    target_link_libraries( Simple_TextureCubemap Common )
+else()
+    add_executable( Simple_TextureCubemap Simple_TextureCubemap.c )
+    target_link_libraries( Simple_TextureCubemap Common )
+endif()

@@ -1,0 +1,16 @@
+apply from: "$project.rootDir/opengles3-book.gradle"
+
+android {
+    defaultConfig {
+        externalNativeBuild {
+            cmake {
+                targets 'ParticleSystem'
+            }
+        }
+    }
+    sourceSets {
+        main.assets {
+            srcDir "$project.rootDir/../src-opengles3-book/Chapter_14/ParticleSystem"
+        }
+    }
+}

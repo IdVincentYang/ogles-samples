@@ -1,0 +1,7 @@
+if(ANDROID)
+    add_library( Shadows SHARED Shadows.c )
+    target_link_libraries( Shadows Common )
+else()
+    add_executable( Shadows Shadows.c )
+    target_link_libraries( Shadows Common )
+endif()

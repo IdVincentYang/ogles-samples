@@ -1,0 +1,7 @@
+if(ANDROID)
+    add_library( MRTs SHARED MRTs.c )
+    target_link_libraries( MRTs Common )
+else()
+    add_executable( MRTs MRTs.c )
+    target_link_libraries( MRTs Common )
+endif()

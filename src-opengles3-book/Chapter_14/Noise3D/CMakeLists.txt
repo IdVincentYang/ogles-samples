@@ -1,0 +1,7 @@
+if(ANDROID)
+    add_library( Noise3D SHARED Noise3D.c )
+    target_link_libraries( Noise3D Common )
+else()
+    add_executable( Noise3D Noise3D.c )
+    target_link_libraries( Noise3D Common )
+endif()

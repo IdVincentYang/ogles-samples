@@ -14,18 +14,16 @@ SUBDIRS( Common
          Chapter_6/MapBuffers
          Chapter_6/VertexArrayObjects
          Chapter_6/VertexBufferObjects
-        )
-
-#         Chapter_7/Instancing
-#         Chapter_8/Simple_VertexShader
-#         Chapter_9/Simple_Texture2D
-#         Chapter_9/Simple_TextureCubemap
-#         Chapter_9/MipMap2D
-#         Chapter_9/TextureWrap
-#         Chapter_10/MultiTexture
-#         Chapter_11/MRTs
-#         Chapter_14/Noise3D
-#         Chapter_14/ParticleSystem
-#         Chapter_14/ParticleSystemTransformFeedback
-#         Chapter_14/Shadows
-#         Chapter_14/TerrainRendering )
+         Chapter_7/Instancing
+         Chapter_8/Simple_VertexShader
+         Chapter_9/Simple_Texture2D
+         Chapter_9/Simple_TextureCubemap
+         Chapter_9/MipMap2D
+         Chapter_9/TextureWrap
+         Chapter_10/MultiTexture
+         Chapter_11/MRTs
+         Chapter_14/Noise3D
+         Chapter_14/ParticleSystem
+         Chapter_14/ParticleSystemTransformFeedback
+         Chapter_14/Shadows
+         Chapter_14/TerrainRendering )

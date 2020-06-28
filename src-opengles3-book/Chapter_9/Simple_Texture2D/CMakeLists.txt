@@ -1,0 +1,7 @@
+if(ANDROID)
+    add_library( Simple_Texture2D SHARED Simple_Texture2D.c )
+    target_link_libraries( Simple_Texture2D Common )
+else()
+    add_executable( Simple_Texture2D Simple_Texture2D.c )
+    target_link_libraries( Simple_Texture2D Common )
+endif()

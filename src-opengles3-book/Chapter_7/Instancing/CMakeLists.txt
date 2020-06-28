@@ -1,0 +1,7 @@
+if(ANDROID)
+    add_library( Instancing SHARED Instancing.c )
+    target_link_libraries( Instancing Common )
+else()
+    add_executable( Instancing Instancing.c )
+    target_link_libraries( Instancing Common )
+endif()
