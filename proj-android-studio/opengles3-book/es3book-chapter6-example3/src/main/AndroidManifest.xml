@@ -7,7 +7,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="HelloTriangle">
         <activity android:name="android.app.NativeActivity"
-            android:label="HelloTriangle"
+            android:label="Example_6_3"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:launchMode="singleTask"
             android:configChanges="orientation|keyboardHidden">

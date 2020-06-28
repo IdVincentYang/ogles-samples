@@ -1,9 +1,6 @@
 cmake_minimum_required( VERSION 2.6 )
 project( ES3_Book )
 
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
 include_directories( External/Include )
 include_directories( Common/Include )
 
@@ -13,5 +10,6 @@ find_library( EGL_LIBRARY EGL "EGL 1.4 library" )
 SUBDIRS( Common
          Chapter_2/Hello_Triangle
          Chapter_6/Example_6_3
+         Chapter_6/Example_6_6
         )
 		
